@@ -21,7 +21,7 @@ if(isset($_POST['add_to_cart'])){
     $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
     if(mysqli_num_rows($check_cart_numbers) > 0){
-        $message[] = 'already added to cart';
+        $message[] = 'al toegevoegd aan winkelwagen';
     }else{
 
         $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
@@ -31,7 +31,7 @@ if(isset($_POST['add_to_cart'])){
         }
 
         mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
-        $message[] = 'product added to cart';
+        $message[] = 'product toegevoegd aan winkelwagen';
     }
 
 }
@@ -69,7 +69,7 @@ if(isset($_GET['delete_all'])){
 <?php @include 'header.php'; ?>
 
 <section class="heading">
-    <h3>your wishlist</h3>
+    <h3>uw verlanglijst</h3>
     <p> <a href="home.php">home</a> / wishlist </p>
 </section>
 
@@ -95,21 +95,21 @@ if(isset($_GET['delete_all'])){
         <input type="hidden" name="product_name" value="<?php echo $fetch_wishlist['name']; ?>">
         <input type="hidden" name="product_price" value="<?php echo $fetch_wishlist['price']; ?>">
         <input type="hidden" name="product_image" value="<?php echo $fetch_wishlist['image']; ?>">
-        <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+        <input type="submit" value="Voeg toe aan winkelwagen" name="add_to_cart" class="btn">
         
     </form>
     <?php
     $grand_total += $fetch_wishlist['price'];
         }
     }else{
-        echo '<p class="empty">your wishlist is empty</p>';
+        echo '<p class="empty">uw verlanglijstje is leeg</p>';
     }
     ?>
     </div>
 
     <div class="wishlist-total">
-        <p>grand total : <span>$<?php echo $grand_total; ?>/-</span></p>
-        <a href="shop.php" class="option-btn">continue shopping</a>
+        <p>eindtotaal : <span>$<?php echo $grand_total; ?>/-</span></p>
+        <a href="shop.php" class="option-btn">doorgaan met winkelen</a>
         <a href="wishlist.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">delete all</a>
     </div>
 
