@@ -75,7 +75,7 @@ if(isset($_GET['delete_all'])){
 
 <section class="wishlist">
 
-    <h1 class="title">products added</h1>
+    <h1 class="title">producten toegevoegd</h1>
 
     <div class="box-container">
 
@@ -110,7 +110,7 @@ if(isset($_GET['delete_all'])){
     <div class="wishlist-total">
         <p>eindtotaal : <span>$<?php echo $grand_total; ?>/-</span></p>
         <a href="shop.php" class="option-btn">doorgaan met winkelen</a>
-        <a href="wishlist.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">delete all</a>
+        <a href="wishlist.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from wishlist?');">Verwijder alles</a>
     </div>
 
 </section>
