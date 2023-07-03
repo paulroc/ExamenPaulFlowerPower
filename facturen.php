@@ -61,6 +61,6 @@ if (mysqli_num_rows($select_facturen) > 0) {
   }}
 ?>
 </table>
-<a href="home.php" class="option-btn">go back</a>
+<a href="home.php" class="option-btn">ga terug</a>
 </body>
 </html>
