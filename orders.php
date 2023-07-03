@@ -50,6 +50,7 @@ if(!isset($user_id)){
     <div class="box">
         <p> geplaatst op : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
         <p> naam : <span><?php echo $fetch_orders['name']; ?></span> </p>
+        <p> nummer : <span><?php echo $fetch_orders['number']; ?></span> </p>
         <p> email : <span><?php echo $fetch_orders['email']; ?></span> </p>
         <p> adres : <span><?php echo $fetch_orders['address']; ?></span> </p>
         <p> betalingsmiddel : <span><?php echo $fetch_orders['method']; ?></span> </p>
