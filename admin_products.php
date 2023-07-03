@@ -79,9 +79,9 @@ if(isset($_GET['delete'])){
       <h3>nieuw product toevoegen</h3>
       <input type="text" class="box" required placeholder="voer de productnaam in" name="name">
       <input type="number" min="0" class="box" required placeholder="voer de productprijs in" name="price">
-      <textarea name="details" class="box" required placeholder="enter product details" cols="30" rows="10"></textarea>
+      <textarea name="details" class="box" required placeholder="voer productgegevens in" cols="30" rows="10"></textarea>
       <input type="file" accept="image/jpg, image/jpeg, image/png" required class="box" name="image">
-      <input type="submit" value="add product" name="add_product" class="btn">
+      <input type="submit" value="product toevoegen" name="add_product" class="btn">
    </form>
 
 </section>

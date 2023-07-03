@@ -98,7 +98,7 @@ if(isset($_GET['update'])) {
         </script>
 
         <input type="submit" value="update gebruiker gegevens" name="update_user" class="btn">
-        <a href="admin_users.php" class="option-btn">go back</a>
+        <a href="admin_users.php" class="option-btn">ga terug</a>
 
     </form>
 </section>

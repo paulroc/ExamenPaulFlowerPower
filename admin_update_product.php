@@ -46,7 +46,7 @@ if(isset($_POST['update_product'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>update product</title>
+   <title>product bijwerken</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -75,10 +75,10 @@ if(isset($_POST['update_product'])){
    <input type="hidden" value="<?php echo $fetch_products['image']; ?>" name="update_p_image">
    <input type="text" class="box" value="<?php echo $fetch_products['name']; ?>" required placeholder="productnaam bijwerken" name="naam">
    <input type="number" min="0" class="box" value="<?php echo $fetch_products['price']; ?>" required placeholder="productprijs bijwerken" name="prijs">
-   <textarea name="details" class="box" required placeholder="update product details" cols="30" rows="10"><?php echo $fetch_products['details']; ?></textarea>
+   <textarea name="details" class="box" required placeholder="productdetails bijwerken" cols="30" rows="10"><?php echo $fetch_products['details']; ?></textarea>
    <input type="file" accept="image/jpg, image/jpeg, image/png" class="box" name="image">
-   <input type="submit" value="update product" name="update_product" class="btn">
-   <a href="admin_products.php" class="option-btn">go back</a>
+   <input type="submit" value="product bijwerken" name="update_product" class="btn">
+   <a href="admin_products.php" class="option-btn">ga terug</a>
 </form>
 
 <?php
