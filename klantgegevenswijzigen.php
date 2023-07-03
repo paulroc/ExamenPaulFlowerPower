@@ -78,7 +78,7 @@ if(isset($_SESSION['user_id'])) {
 
 
         <input type="submit" value="update gebruiker gegevens" name="update_user" class="btn">
-        <a href="home.php" class="option-btn">go back</a>
+        <a href="home.php" class="option-btn">ga terug</a>
 
     </form>
 </section>
